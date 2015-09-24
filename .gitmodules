@@ -1,0 +1,3 @@
+[submodule "projects/robins-npm-module"]
+	path = projects/robins-npm-module
+	url = git@github.com:robinrob/robins-node-module.git

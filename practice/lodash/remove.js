@@ -22,3 +22,28 @@ _.remove(a, function(obj) {
 })
 
 console.log("a: " + JSON.stringify(a))
+
+a = [{name: 'one', data: [null, null]}, {name: 'two', data: [0, 0]}, {name: 'three', data: [1, 2, 3]}]
+
+console.log("a: " + JSON.stringify(a))
+
+_.remove(a, function(obj) {
+  return _.sum(obj.data) == 0
+})
+
+console.log("a: " + JSON.stringify(a))
+
+a = [{name: 'one', data: [[null, null], [null, null]]}, {name: 'two', data: [[0, 0], [0, 0]]}, {name: 'three', data: [[1, 2, 3], [1, 2, 3]]}]
+
+console.log("a: " + JSON.stringify(a))
+
+_.forEach(a, function(series) {
+  _.remove(series.data, function(pair) {
+    return _.sum(pair) == 0
+  })
+})
+_.remove(a, function(series) {
+  return series.data.length == 0
+})
+
+console.log("a: " + JSON.stringify(a))
