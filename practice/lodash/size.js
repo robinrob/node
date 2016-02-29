@@ -10,3 +10,6 @@ res = _.size(a)
 
 console.log("a: " + JSON.stringify(res))
 
+res = _.size(a.b)
+
+console.log("a: " + JSON.stringify(res))
