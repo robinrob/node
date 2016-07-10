@@ -18,3 +18,7 @@ var blah = {}
 var res = _.isNil(blah.nothing)
 
 console.log("res: " + res)
+
+var res = _.isNil(null)
+
+console.log("res: " + res)

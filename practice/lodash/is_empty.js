@@ -13,3 +13,7 @@ console.log("res: " + res)
 var res = _.isEmpty(2)
 
 console.log("res: " + res)
+
+var res = _.isEmpty(null)
+
+console.log("res: " + res)
