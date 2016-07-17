@@ -1,20 +1,29 @@
 #!/usr/bin/env node
 
-var c = function(msg) {
-    console.log('C')
-    console.log(msg)
+function a() {
+  console.log("Hello")
+  return function(){
+    console.log("World!"); 
+  };
 }
 
-var b = function(msg) {
-    console.log('B')
-    return function() {
-        c(msg)
-    }
-}
+a()()
 
-var a = function() {
-    return b('Hello from a')
-}
+// Function re-writing itself
+a = a()
+a()
+a()
 
-var d = a()
-d()
+// var myfunc = function(){
+//     console.log(this.name);
+// };
+//
+// var obj_a = {
+//     console.log("FOO!");
+// };
+//
+// var obj_b = {
+//     name:  "BAR!!"
+// };
+//
+// myfunc.call(obj_a);
