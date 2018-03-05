@@ -22,3 +22,8 @@ console.log("res: " + res)
 var res = _.isNil(null)
 
 console.log("res: " + res)
+
+var a = {}
+var res = _.isNil(a.ressf)
+
+console.log("res: " + res)

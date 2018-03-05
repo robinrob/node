@@ -2,7 +2,18 @@
 
 "use strict"
 
-let func = function(one, two, three, four, five) {
+let args = [2, 3, 4]
+
+let func = function(one, two, three) {
+    console.log('one: ' + one)
+    console.log('two: ' + two)
+    console.log('three: ' + three)
+}
+
+func(1, ...args, 5)
+console.log()
+
+func = function(one, two, three, four, five) {
     console.log('one: ' + one)
     console.log('two: ' + two)
     console.log('three: ' + three)
@@ -10,6 +21,21 @@ let func = function(one, two, three, four, five) {
     console.log('five: ' + five)
 }
 
-let args = [2, 3, 4]
 
 func(1, ...args, 5)
+console.log()
+
+let a = [1, ...args, 5]
+
+console.log('a: ' + a)
+console.log()
+
+func = function(one, two, ...threefourfive) {
+    console.log('one: ' + one)
+    console.log('two: ' + two)
+    console.log('threefourfive: ' + threefourfive)
+}
+
+func(1, 2, 3, 4, 5)
+
+

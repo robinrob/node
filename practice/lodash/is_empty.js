@@ -17,3 +17,9 @@ console.log("res: " + res)
 var res = _.isEmpty(null)
 
 console.log("res: " + res)
+
+var res = _.isEmpty(undefined)
+
+console.log("res: " + res)
+
+var res = _.isEmpty('1')

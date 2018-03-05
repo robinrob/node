@@ -33,14 +33,14 @@ var iterable = (function(){
 
 // For..of automaticlaly calls next() on an iterator and checks the value of
 // done.
-for (var v of iterable) {
+for (let v of iterable) {
   console.log('v: ' + v)
 }
 console.log()
 
 
 // Built-in data structures like arrays have default iterators
-for (var v of [1, 2, 3, 4, 5]) {
+for (let v of [1, 2, 3, 4, 5]) {
   console.log('v: ' + v)
 }
 console.log()
@@ -74,7 +74,7 @@ function *something() {
 // a signal is sent to the iterator to stop iterating, so the generator will
 // not be left in a 'suspended' state at the previous yield expression.
 var it = something()
-for (var v of it) {
+for (let v of it) {
   if (v > 500) {
     break
   }
